@@ -1,0 +1,90 @@
+/* CSS declarations go here */
+
+/* Nav Styles */
+.navbar-default {
+  background: #fff;
+  height: 150px;
+  border: none;
+  border-bottom: 1px solid #C02332;
+  border-radius: 0;
+  padding-top: 10px;
+}
+img.logo {
+  max-width: 120px;
+}
+#navbar{
+  height: 150px !important;
+}
+.nav {
+  height: 150px;
+  padding: 40px;
+}
+.nav li {
+  padding-right: 20px;
+  font-size: 20px;
+}
+.nav li a:hover {
+  color: #C02332 !important;
+}
+
+
+/* Header Styles */
+.header {
+  background: #C02332;
+  color: #fff;
+  border-radius: 0 !important;
+}
+.header-main {
+  margin-bottom: 50px;
+}
+
+
+/* Footer Styles */
+.footer {
+  background: #f2f2f2;
+  height: 300px;
+  border-top: 2px solid #C02332;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer img {
+  margin-top: 100px;
+  max-height: 100px;
+}
+
+
+/* Incident Form Style */
+.incident-form {
+  border: solid 1px gray;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 30px;
+  box-shadow: 7px 7px 3px 0px #cccccc;
+}
+.incident-form h2{
+  color: #C02332;
+  margin-bottom: 50px;
+  background: #f2f2f2;
+  padding: 10px 0;
+}
+
+.incident-form div.form-group {
+  margin-bottom: 35px;
+}
+.incident-form button {
+  font-size: 16px;
+}
+#report-number {
+  color: #C02332;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* Incidents List Style*/
+.incidents-list li{
+  display: inline;
+}

@@ -1,0 +1,67 @@
+<template name="createForm">
+  <!-- <div class="incident-form">
+    <h2 class="text-center">Incident Report Form</h2>
+    <br>
+    <form>
+      <div class="form-group form-inline row">
+        <div class="col-md-6">
+            <label for="report-number">Incident Report Number:</label>
+            <input type="text" class="form-control" id="report-number" value="{{setNumber}}" disabled>
+        </div>
+
+        <div class="col-md-6">
+          <label for="report-date">Incident Report Date:</label>
+          <input type="date" class="form-control" id="report-date">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="area">Area(s) of Incident:</label>
+        <input type="text" class="form-control" id="area">
+      </div>
+
+      <div class="form-group">
+        <label for="priority">Incident Priority:</label>
+        <div class="row">
+          <div class="col-md-4">
+            <label class="radio-inline"><input type="radio" name="priority" value="Low">Low</label>
+          </div>
+          <div class="col-md-4">
+            <label class="radio-inline"><input type="radio" name="priority" value="Medium">Medium</label>
+          </div>
+          <div class="col-md-4">
+            <label class="radio-inline"><input type="radio" name="priority" vlaue="High">High</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Incident Description:</label>
+        <textarea name="description" class="form-control" id="description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="cause">Incident Root Cause:</label>
+        <textarea name="cause" class="form-control" id="cause"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="impact">Incident Impact / Financial Impact (if any):</label>
+        <textarea name="impact" class="form-control" id="impact"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="suggested-actions">Suggested Corrective &amp; Preventive Actions:</label>
+        <textarea name="suggested-actions" class="form-control" id="suggested-actions"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="penalty">Punishments / Penalties (if required):</label>
+        <textarea name="penalty" class="form-control" id="penalty"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-save fa-lg"></i> SAVE</button>
+    </form>
+  </div> -->
+  {{> quickForm collection="Incidents" id="insertIncidentForm" type="insert"}}
+</template>
