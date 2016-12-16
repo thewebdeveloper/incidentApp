@@ -59,7 +59,7 @@ img.logo {
 /* Incident Form Style */
 .incident-form {
   border: solid 1px gray;
-  border-radius: 5px;
+  border-radius: 0px;
   margin-bottom: 50px;
   padding: 30px;
   box-shadow: 7px 7px 3px 0px #cccccc;
@@ -84,7 +84,20 @@ img.logo {
 }
 
 
-/* Incidents List Style*/
+/* Incidents List Style */
 .incidents-list li{
   display: inline;
 }
+
+
+
+/* Incident Details Style */
+.incident-details th{
+  /*background: #eeeeee;*/
+  font-weight: bolder;
+}
+
+
+
+
+

@@ -1,10 +1,57 @@
 <template name="incidentDetails">
   {{#if Template.subscriptionsReady}}
     {{#with incident}}
-      <p>{{number}}</p>
-      <p>{{date}}</p>
+    	<h3 class="text-center">Incident Details - Number {{number}}</h3>
+      <table class="table table-bordered table-hover incident-details">
+				<tbody>
+						<tr>
+							<th>Incident Date</th>
+							<td>{{date}}</td>
+						</tr>
+						<tr>
+							<th>Areas</th>
+							<td>{{area}}</td>
+						</tr>
+						<tr>
+							<th>Priority</th>
+							<td>{{priority}}</td>
+						</tr>
+						<tr>
+							<th>Description</th>
+							<td>{{desc}}</td>
+						</tr>
+						<tr>
+							<th>Root Cause</th>
+							<td>{{cause}}</td>
+						</tr>
+						<tr>
+							<th>Impact</th>
+							<td>{{impact}}</td>
+						</tr>
+						<tr>
+							<th>Suggested &amp; Preventive Actions</th>
+							<td>{{action}}</td>
+						</tr>
+						<tr>
+							<th>Any Penalties</th>
+							<td>{{penalty}}</td>
+						</tr>
+						<tr>
+							<th>Created By</th>
+							<td>{{username}}</td>
+						</tr>
+						<tr>
+							<th>Report Creation Date</th>
+							<td>{{createdAt}}</td>
+						</tr>
+				</tbody>
+			</table>
+			<button class="btn btn-info">Back</button>
+			<button class="btn btn-warning">Edit</button>
     {{/with}}
   {{else}}
       <p>Loading...</p>
   {{/if}}
 </template>
+
+

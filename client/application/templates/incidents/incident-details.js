@@ -12,5 +12,9 @@ Template.incidentDetails.helpers({
     var reportId = FlowRouter.getParam('reportId');
     var incident = Incidents.findOne({_id: reportId}) || {};
     return incident;
+  },
+  username: function() {
+    var username = Meteor.user().username;
+    return username;
   }
 });

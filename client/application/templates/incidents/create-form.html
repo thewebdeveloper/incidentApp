@@ -63,5 +63,30 @@
       <button type="submit" class="btn btn-success btn-block"><i class="fa fa-save fa-lg"></i> SAVE</button>
     </form>
   </div> -->
-  {{> quickForm collection="Incidents" id="insertIncidentForm" type="insert"}}
+  <!-- {{> quickForm collection="Incidents" id="insertIncidentForm" type="insert"}} -->
+
+
+  {{#autoForm collection="Incidents" id="insertIncidentForm" type="insert"}}
+    <fieldset class="incident-form">
+      <h2 class="text-center">Incident Report Form</h2>
+      <div class="row">
+        <div class="col-md-6">
+          {{> afQuickField name='number'}}
+        </div>
+        <div class="col-md-6">
+          {{> afQuickField name='date'}}
+        </div>
+      </div>
+      {{> afQuickField name='area'}}
+      {{> afQuickField name='priority' type='select-radio-inline' options="allowed"}}
+      {{> afQuickField name='desc' rows=6}}
+      {{> afQuickField name='cause' rows=6}}
+      {{> afQuickField name='impact' rows=6}}
+      {{> afQuickField name='action' rows=6}}
+      {{> afQuickField name='penalty' rows=6}}
+      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-paper-plane-o"></i> Submit Report</button>
+    </fieldset>
+  {{/autoForm}}
+
+
 </template>
