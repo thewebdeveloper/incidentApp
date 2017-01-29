@@ -7,6 +7,21 @@ Template.incidentsList.onCreated(function() {
 
 Template.incidentsList.helpers({
   incidents: function() {
-    return Incidents.find();
+    var user = Meteor.userId();
+    return Incidents.find({ createdBy: user});
   }
 });
+
+
+Template.incidentItem.helpers({
+	getBackground: function(priority) {
+		
+		if (priority === "High") {
+			return 'red';
+		} else if (priority === "Medium") {
+			return 'orange';
+		} else {
+			return 'yellow';
+		}
+	}
+})

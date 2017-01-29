@@ -89,12 +89,19 @@ img.logo {
   display: inline;
 }
 
+td.priority{
 
+}
 
 /* Incident Details Style */
 .incident-details th{
   /*background: #eeeeee;*/
   font-weight: bolder;
+}
+
+.incident-details-btn {
+  margin-bottom: 20px;
+  /*border: solid 1px black;*/
 }
 
 

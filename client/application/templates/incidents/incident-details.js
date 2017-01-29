@@ -18,3 +18,22 @@ Template.incidentDetails.helpers({
     return username;
   }
 });
+
+Template.incidentDetails.events({
+
+  'click .js-back': function(event) {
+    event.preventDefault();
+    FlowRouter.go('reports');
+  },
+
+  'click .js-edit': function(event) {
+    event.preventDefault();
+    var docId = FlowRouter.getParam('reportId');
+    FlowRouter.go('/reports/'+docId+'/edit');
+  },
+
+  'click .js-file': function(event) {
+    event.preventDefault();
+
+  }
+})

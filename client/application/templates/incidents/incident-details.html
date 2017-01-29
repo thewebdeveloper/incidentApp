@@ -1,7 +1,7 @@
 <template name="incidentDetails">
   {{#if Template.subscriptionsReady}}
     {{#with incident}}
-    	<h3 class="text-center">Incident Details - Number {{number}}</h3>
+    	<h3 class="text-center">Incident Details - Report No. {{number}}</h3>
       <table class="table table-bordered table-hover incident-details">
 				<tbody>
 						<tr>
@@ -46,9 +46,25 @@
 						</tr>
 				</tbody>
 			</table>
-			<button class="btn btn-info">Back</button>
-			<button class="btn btn-warning">Edit</button>
+			<!-- <div class="row incident-details-btn">
+				<div class="col-md-4">
+					<button class="btn btn-info btn-block js-back"><i class="fa fa-home"></i> Home</button>
+				</div>
+				<div class="col-md-4">
+					<button class="btn btn-danger btn-block js-edit"><i class="fa fa-edit"></i> Edit</button>
+				</div>
+				<div class="col-md-4">
+					<button class="btn btn-success btn-block js-pdf"><i class="fa fa-file-pdf-o"></i> Generate PDF</button>
+				</div>
+			</div> -->
+
+			<div class="incident-details-btn text-center">
+				<button class="btn btn-info js-back"><i class="fa fa-home"></i> Home</button>
+				<button class="btn btn-warning  js-edit"><i class="fa fa-edit"></i> Edit</button>
+				<button class="btn btn-success js-pdf"><i class="fa fa-file-pdf-o"></i> Generate PDF</button>
+			</div>
     {{/with}}
+  
   {{else}}
       <p>Loading...</p>
   {{/if}}

@@ -1,25 +1,27 @@
 <template name="createForm">
-  <!-- <div class="incident-form">
+
+  <div class="incident-form">
     <h2 class="text-center">Incident Report Form</h2>
     <br>
-    <form>
-      <div class="form-group form-inline row">
+    <form id="incident-form">
+      <!-- <div class="form-group form-inline row">
         <div class="col-md-6">
             <label for="report-number">Incident Report Number:</label>
             <input type="text" class="form-control" id="report-number" value="{{setNumber}}" disabled>
         </div>
-
         <div class="col-md-6">
           <label for="report-date">Incident Report Date:</label>
           <input type="date" class="form-control" id="report-date">
         </div>
+      </div> -->
+      <div class="form-group">
+        <label for="report-date">Incident Report Date:</label>
+          <input type="date" class="form-control" id="report-date">
       </div>
-
       <div class="form-group">
         <label for="area">Area(s) of Incident:</label>
         <input type="text" class="form-control" id="area">
       </div>
-
       <div class="form-group">
         <label for="priority">Incident Priority:</label>
         <div class="row">
@@ -34,59 +36,30 @@
           </div>
         </div>
       </div>
-
       <div class="form-group">
         <label for="description">Incident Description:</label>
-        <textarea name="description" class="form-control" id="description"></textarea>
+        <textarea name="description" class="form-control" rows=6 id="description"></textarea>
       </div>
-
       <div class="form-group">
         <label for="cause">Incident Root Cause:</label>
         <textarea name="cause" class="form-control" id="cause"></textarea>
       </div>
-
       <div class="form-group">
         <label for="impact">Incident Impact / Financial Impact (if any):</label>
         <textarea name="impact" class="form-control" id="impact"></textarea>
       </div>
-
       <div class="form-group">
         <label for="suggested-actions">Suggested Corrective &amp; Preventive Actions:</label>
         <textarea name="suggested-actions" class="form-control" id="suggested-actions"></textarea>
       </div>
-
       <div class="form-group">
         <label for="penalty">Punishments / Penalties (if required):</label>
         <textarea name="penalty" class="form-control" id="penalty"></textarea>
       </div>
-
-      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-save fa-lg"></i> SAVE</button>
-    </form>
-  </div> -->
-  <!-- {{> quickForm collection="Incidents" id="insertIncidentForm" type="insert"}} -->
-
-
-  {{#autoForm collection="Incidents" id="insertIncidentForm" type="insert"}}
-    <fieldset class="incident-form">
-      <h2 class="text-center">Incident Report Form</h2>
-      <div class="row">
-        <div class="col-md-6">
-          {{> afQuickField name='number'}}
-        </div>
-        <div class="col-md-6">
-          {{> afQuickField name='date'}}
-        </div>
+      <div class="form-group">
+        <a class="btn btn-warning js-reset-btn"><i class="fa fa-save fa-lg"></i> Reset</a>
+        <button type="submit" class="btn btn-success"><i class="fa fa-save fa-lg"></i> Save</button>
       </div>
-      {{> afQuickField name='area'}}
-      {{> afQuickField name='priority' type='select-radio-inline' options="allowed"}}
-      {{> afQuickField name='desc' rows=6}}
-      {{> afQuickField name='cause' rows=6}}
-      {{> afQuickField name='impact' rows=6}}
-      {{> afQuickField name='action' rows=6}}
-      {{> afQuickField name='penalty' rows=6}}
-      <button type="submit" class="btn btn-success btn-block"><i class="fa fa-paper-plane-o"></i> Submit Report</button>
-    </fieldset>
-  {{/autoForm}}
-
-
+    </form>
+  </div>
 </template>

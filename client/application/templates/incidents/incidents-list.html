@@ -1,9 +1,12 @@
 <template name="incidentsList">
+    <h2 class="incidentsList-title text-center">Incidents List</h2>
+    <i class="fa fa-search text-right"></i>
     <table class="table table-hover">
       <thead>
-        <th>Incident Number</th>
-        <th>Incident Date</th>
-        <th>Incident Priority</th>
+        <th>Incident Number <i class="fa fa-sort-desc"></i></th>
+        <th>Incident Date <i class="fa fa-sort"></i></th>
+        <th>Incident Priority <i class="fa fa-sort"></i></th>
+        <th>Incident Details</th>
       </thead>
 
       <tbody>
@@ -16,10 +19,10 @@
 
 
 <template name="incidentItem">
-  <tr>
+  <tr class="incident-item">
     <td>{{number}}</td>
     <td>{{date}}</td>
-    <td>{{priority}}</td>
+    <td class="priority"><i class="fa fa-circle-o" style="color: {{getBackground priority}}"></i> {{priority}}</td>
     <td><a href="/reports/{{_id}}" class="btn btn-primary">View Details</a></td>
   </tr>
 </template>

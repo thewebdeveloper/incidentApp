@@ -1,3 +1,19 @@
 <template name="editForm">
-  {{> quickForm collection="Incidents" id="updateIncidentForm" type="update" doc=this}}
+  {{#with incident}}
+	  {{#autoForm collection="Incidents" doc=this id="updateIncidentForm" type="update" autosave=true}}
+	  	
+	  	<form class="incident-form">
+	      <h2 class="text-center">Update Incident Report No. {{number}}</h2>
+	      {{> afQuickField name='date'}}
+	      {{> afQuickField name='area'}}
+	      {{> afQuickField name='priority' type='select-radio-inline' options="allowed"}}
+	      {{> afQuickField name='desc' rows=6}}
+	      {{> afQuickField name='cause' rows=2}}
+	      {{> afQuickField name='impact' rows=2}}
+	      {{> afQuickField name='action' rows=2}}
+	      {{> afQuickField name='penalty' rows=2}}
+	      <button class="btn btn-success btn-block update-button"><i class="fa fa-paper-plane-o"></i> Update Report</button>
+	    </form>
+	  {{/autoForm}}
+	{{/with}}
 </template>

@@ -20,6 +20,7 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 
 twbs:bootstrap
 themeteorchef:bert
+check
 
 aldeed:collection2
 aldeed:autoform
@@ -29,3 +30,13 @@ meteortoys:allthings
 fortawesome:fontawesome
 accounts-ui
 accounts-password
+nilsdannemann:pdfmake
+
+dburles:collection-helpers
+alanning:roles
+
+
+
+
+momentjs:moment
+alethes:pages

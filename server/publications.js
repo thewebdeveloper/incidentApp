@@ -1,7 +1,11 @@
 Meteor.publish('allIncidents', function () {
-  return Incidents.find({});
+	if(this.userId) {
+		return Incidents.find({});
+	}
 });
 
 Meteor.publish('singleIncident', function (reportId) {
-  return Incidents.find({ _id: reportId });
+	if (this.userId) {
+		return Incidents.find({ _id: reportId });
+	}
 });
